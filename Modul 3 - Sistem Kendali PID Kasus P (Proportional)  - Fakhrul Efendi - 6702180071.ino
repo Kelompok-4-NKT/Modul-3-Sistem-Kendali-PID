@@ -138,6 +138,7 @@ void follow_line() {
 }
 void setMotor(int pwmKiri, int pwmKanan)
 {
+  int maxpwm;
   //maxpwm di-set 255
   if (pwmKiri > pwmKanan){
     pwmKiri = maxpwm;

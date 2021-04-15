@@ -140,7 +140,7 @@ void setMotor(int pwmKiri, int pwmKanan)
 {
   int maxpwm;
   //maxpwm di-set 255
-  if (pwmKiri > pwmKanan){
+  if (pwmKiri > maxpwm){
     pwmKiri = maxpwm;
   }
   else if (pwmKiri < -maxpwm){
@@ -167,8 +167,8 @@ void setMotor(int pwmKiri, int pwmKanan)
   if (pwmKanan < 0)
   {
     pwmKanan *= -1;
-    analogWrite(motor_kanan2, 0);
-    analogWrite(motor_kanan1, pwmKanan);
+    analogWrite(motor_kanan2, pwmKanan);
+    analogWrite(motor_kanan1, 0);
   }
   else
   {
